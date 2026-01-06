@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Khánh Vy 🎂</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        .message {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        .english {
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 1.05em;
+            color: #fff0f5;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        /* Heart animation */
+        .heart {
+            position: absolute;
+            color: #ff4d6d;
+            font-size: 20px;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1.4);
+                opacity: 0;
+            }
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nhạc nền -->
+    <audio autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <h1>🎉 Happy Birthday 🎉</h1>
+        <h2>Lê Nguyễn Khánh Vy – 14 tuổi 🎂<br>07/01/2012</h2>
+
+        <div class="message">
+            <p>
+                Vợ ơi hihi  💖,  
+                hôm nay là một ngày thật đặc biệt, bởi vì thiên thần nhỏ của tuii đã được 14 tuổi rồi.
+                Anhhh chúc em luôn vui vẻ, hạnh phúc, luôn cười thật tươi và luôn là chính em –  
+                một cô bé đáng yêu, dịu dàng và quan trọng nhất… là người anh yêu thương nhất hihiii.
+            </p>
+
+            <p>
+                Dù có thế nào, anh vẫn sẽ yêu em, bên em,  
+                và hứa trong tương lai, người mang váy cô dâu sẽ là em 💍.  
+                Anh mong rằng mọi buồn vui trong cuộc sống, anh đều có thể cùng em trải qua.
+            </p>
+
+            <div class="english">
+                <p>
+                    My love 💕,  
+                    today is a very special day because the most wonderful girl in my life turns 14.
+                    I wish you happiness, smiles, and beautiful dreams.
+                </p>
+
+                <p>
+                    No matter what happens, I will always love you and stay by your side.  
+                    And I promise, in the future, the one wearing the wedding dress will be you.
+                </p>
+            </div>
+
+            <div class="signature">
+                💌 Yêu em rất nhiều – Anh 💌
+            </div>
+        </div>
+    </div>
+
+    <!-- Hearts -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+
+</body>
+</html>
